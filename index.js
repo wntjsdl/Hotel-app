@@ -39,9 +39,13 @@ document.querySelector('.checkin-btn').addEventListener('click', function(){
   console.log(name);
   document.querySelector('.description').textContent = '';
   document.querySelector('.description').textContent = hotel.checkIn(name);
+  document.querySelector('#name').value = '';
+  document.querySelector('#name').focus();
 });
 document.querySelector('.checkout-btn').addEventListener('click', function(){
   name = document.querySelector('#name').value;
   document.querySelector('.description').textContent = '';
   document.querySelector('.description').textContent = hotel.checkOut(name);
+  document.querySelector('#name').value = '';
+  document.querySelector('#name').focus();
 });
